@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+from fastapi import Request, Response
 from app.models.schemas import *
 from app.models.database import get_db_connection
 from app.ml.model import diet_model

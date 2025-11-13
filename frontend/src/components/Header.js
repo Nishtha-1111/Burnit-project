@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="header">
-      <h1>🍎 NutriPlan AI</h1>
+      <h1>🍎 Diet-Recommender</h1>
       <p>Get your personalized diet plan powered by Machine Learning</p>
       <div style={{ 
         marginTop: '20px', 
