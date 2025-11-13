@@ -1,0 +1,160 @@
+/* App.css */
+
+/* Page background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #E6E6FA; /* Lavender */
+}
+
+/* Center container */
+.app-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #F8F8F8; /* Light Gray */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Form styling */
+.workout-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+}
+
+/* Full width for mobile */
+@media (max-width: 768px) {
+  .workout-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #FFDAB9; /* Peach */
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs & selects */
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #E6E6FA; /* Lavender border */
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus */
+input[type="number"]:focus,
+select:focus {
+  border-color: #89CFF0; /* Baby Blue */
+  box-shadow: 0 0 5px #89CFF0;
+}
+
+/* Error messages */
+.error {
+  grid-column: span 2;
+  color: #FFB6C1; /* Soft Pink */
+  font-size: 0.9rem;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+/* Buttons */
+.submit-btn, .reset-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Submit */
+.submit-btn {
+  background-color: #98FF98; /* Mint */
+  grid-column: span 1;
+}
+
+/* Reset */
+.reset-btn {
+  background-color: #FFDAB9; /* Peach */
+  grid-column: span 1;
+}
+
+/* Button hover */
+.submit-btn:hover, .reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Results container */
+.results-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Exercise card */
+.exercise-card {
+  background-color: #FFF;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.exercise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Exercise card headings */
+.exercise-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Exercise card text */
+.exercise-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* Simple spinning loader */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #98FF98; /* Mint */
+  border-top: 3px solid #89CFF0; /* Baby Blue */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Disabled submit button */
+.submit-btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
